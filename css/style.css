@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+main {
+  background-color: white;
+  box-shadow: 0px 0px 15px -10px #000000;
+  width: 750px;
+  height: 100vh;
+  margin: auto;
+}
+
+/* bouton dark mode */
+
+.top {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.top .fa-gear {
+  padding: 1rem;
+  font-size: 1.4rem;
+}
+
+.S {
+  top: 1rem;
+  right: 1rem;
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 22px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.S input {
+  margin-left: 5px;
+  margin-top: 2px;
+}
+
+.S input + span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -0;
+  right: 0;
+  background: #08efff;
+  border-radius: 20px;
+}
+.S input + span:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: all 0.5s;
+}
+.S input:checked + span {
+  background: #ff00dd;
+}
+
+.S input:checked + span:before {
+  left: 30px;
+}
+
+.title {
+  display: flex;
+  margin-top: 5rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title h1 {
+  margin-top: 3rem;
+  font-size: 4rem;
+}
+
+.title h1 span {
+  font-weight: 700;
+}
+.title img {
+  width: 15rem;
+}
+
+.bar-search {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.bar-search #bar {
+  background-color: rgb(221, 221, 221);
+  width: 50%;
+  height: 2rem;
+  border-radius: 2rem;
+  border: 1px solid #000000;
+  padding-left: 1rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.bar-search i {
+  position: absolute;
+  display: none;
+}
+
+.bar-search-filtre {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  width: 25rem;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.bar-search-filtre button {
+  width: 7rem;
+  height: 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  box-shadow: 0px 6px 11px -10px #000000;
+}
+
+.search {
+  display: block;
+  margin: auto;
+  margin-top: 4rem;
+}
+
+.search {
+  width: 11rem;
+  height: 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  box-shadow: 0px 6px 11px -10px #000000;
+}
+
+.modal-test {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  width: 100vh;
+  height: 100vh;
+}
+.modal-test.active {
+  visibility: visible;
+  width: 750px;
+}
+
+.overlay {
+  position: absolute;
+  width: 750px;
+  height: 100vh;
+}
+
+.modal {
+  position: relative;
+  width: 690px;
+  height: 100vh;
+  padding: 30px;
+  position: absolute;
+  background: #fff;
+  top: 51%;
+}
+
+.modal p {
+  padding-top: 25px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.btn-x {
+  padding: 3px 5px;
+  position: absolute;
+  right: 1rem;
+  top: -1rem;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #ff486d;
+  color: #fff;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 750px;
+  height: 2rem;
+  background-color: rgb(221, 221, 221);
+  font-size: 0.7rem;
+}
